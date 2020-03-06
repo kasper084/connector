@@ -11,6 +11,7 @@ public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @OneToOne
     private Long id;
 
     @Column(name = "first_name")
