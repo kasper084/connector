@@ -23,4 +23,7 @@ public class Profile {
     private String company;
 
     private String skill;
+
+    @OneToOne(mappedBy = "profile")
+    private Account account;
 }

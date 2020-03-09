@@ -11,7 +11,6 @@ public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @OneToOne
     private Long id;
 
     @Column(name = "first_name")
@@ -25,4 +24,8 @@ public class Account {
     private String gender;
 
     private String username;
+
+    @OneToOne
+    @JoinColumn(name = "profile_id")
+    private Profile profile;
 }
